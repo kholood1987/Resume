@@ -12,7 +12,7 @@ var bio = {
   skills: [
     "Computer Languages",
     "Creativity",
-    "Teamwork",
+    "Team leader",
     "Time Management",
     "Communication"
   ],
