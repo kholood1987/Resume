@@ -95,15 +95,17 @@ $("#header").append(formattedMessage);
 if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
 
-    for( skill in bio.skills){
+       for ( skill in bio.skills){
         var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
         $("#skills").append(formattedSkill);   
     }
-    //    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-    //    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);  
-    //    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);   
-    //    formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-    //    $("#skills").append(formattedSkill);    
+
+ 
+      //var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+      // formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);  
+       // formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);   
+      // formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+       // $("#skills").append(formattedSkill);    
 }
 
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -122,6 +124,17 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").append(formattedLocation);
 $("#footerContacts").append(formattedLocation);
 
+
+
+/* Internationalize Names  */
+function inName(name){
+    var names = name.trim().split(" ");   
+    names[1] = names[1].toUpperCase();
+    names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase(); 
+    return names.join(" ");  
+} 
+
+$("#main").append(internationalizeButton); 
 
 //Work functions
 work.display = function() {
