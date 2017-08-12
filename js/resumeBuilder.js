@@ -95,7 +95,7 @@ $("#header").append(formattedMessage);
 if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
 
-       for ( skill in bio.skills){
+       for(var skill in bio.skills){
         var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
         $("#skills").append(formattedSkill);   
     }
