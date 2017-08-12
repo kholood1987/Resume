@@ -94,7 +94,7 @@ bio.display = function() {
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
   var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
-  $("#header").prepend(formattedRole, formattedName);
+  $("#header").prepend(formattedName + formattedRole);
   $("#header").append(formattedBioPic, formattedWelcomeMsg, HTMLskillsStart);
   $("#topContacts, #footerContacts").append(formattedMobile, formattedEmail, formattedGithub);
 
