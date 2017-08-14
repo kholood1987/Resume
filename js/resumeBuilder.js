@@ -68,17 +68,17 @@ var education = {
       location: "Saudi Arabia, Dammam",
       degree: "BS",
       majors: ["MIS"],
-      year: "2012"
+      Dates: "2008 - 2012",
     }
   ],
 
-  onlineCourses: [
+  "onlineCourses": [
     {
       name: "Udacity",
       location: "Saudia Arabia, Al-khobar",
       degree: "Nanodegree",
       majors: ["Front - End - Developer "],
-      year: "2017"
+      year: "20017 -  2017"
     }
   ]
 };
@@ -95,10 +95,23 @@ $("#header").append(formattedMessage);
 if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
 
-       for(var skill in bio.skills){
+       //for(var skill in bio.skills){
+        //var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+       // $("#skills").append(formattedSkill);   
+   
+   for(var skill=0; skill<bio.skills.length; skill++)
+{
         var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
-        $("#skills").append(formattedSkill);   
+       $("#skills").append(formattedSkill);   
+
+
+
+
     }
+
+
+
+
 
  
       //var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
@@ -123,6 +136,8 @@ $("#footerContacts").append(formattedTwitter);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").append(formattedLocation);
 $("#footerContacts").append(formattedLocation);
+
+
 
 
 
@@ -236,6 +251,8 @@ education.display = function() {
 work.display();
 projects.display();
 education.display();
+bio.display();
+
 
 //Google Maps
 $("#mapDiv").append(googleMap);
