@@ -28,7 +28,10 @@ var work = {
       dates: "Jan 2013 - Jul 2013",
       description:"Responsible for registering student schedules ",
       location: "Saudi Arabia - Al-khobar"
-    };
+     
+    },
+
+
     {
       employer: "Eastern Gate Companey",
       title: "Mnangement Information Manager",
@@ -36,9 +39,12 @@ var work = {
       description:
         "Accomplishes information systems objectives by managing staff; designing and monitoring information systems.",
       location: "Saudi Arabia - Al-khobar"
+    
+
     };
-   
-  ]
+
+   ],
+  
 };
 
 var projects = {
