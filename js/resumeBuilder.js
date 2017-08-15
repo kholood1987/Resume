@@ -28,7 +28,7 @@ var work = {
       dates: "Jan 2013 - Jul 2013",
       description:"Responsible for registering student schedules ",
       location: "Saudi Arabia - Al-khobar"
-    },
+    };
     {
       employer: "Eastern Gate Companey",
       title: "Mnangement Information Manager",
@@ -36,7 +36,7 @@ var work = {
       description:
         "Accomplishes information systems objectives by managing staff; designing and monitoring information systems.",
       location: "Saudi Arabia - Al-khobar"
-    },
+    };
    
   ]
 };
@@ -49,7 +49,7 @@ var projects = {
       description:
         "Coded my own Animal Card using HTML CSS during my Udacity coursework.",
       images: ["images/animal.png"]
-    },
+    };
     {
       title: "Create MY On Line Resume ",
       dates: "2017",
@@ -68,20 +68,24 @@ var education = {
       location: "Saudi Arabia, Dammam",
       degree: "BS",
       majors: ["MIS"],
-      Dates: "2008 - 2012",
+      dates: "2008 - 2012",
     }
   ],
 
   "onlineCourses": [
     {
-      name: "Udacity",
+      school: "Udacity",
       location: "Saudia Arabia, Al-khobar",
-      degree: "Nanodegree",
+      title: "Nanodegree",
       majors: ["Front - End - Developer "],
-      year: "20017 -  2017"
+      dates: "20017 -  2017"
+      url:"http://www.udacity.com/"
     }
   ]
 };
+
+
+bio.display = function() {
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -108,6 +112,7 @@ if (bio.skills.length > 0) {
 
 
     }
+  };
 
 
 
@@ -136,7 +141,6 @@ $("#footerContacts").append(formattedTwitter);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").append(formattedLocation);
 $("#footerContacts").append(formattedLocation);
-
 
 
 
