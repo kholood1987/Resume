@@ -48,17 +48,17 @@ var projects = {
       dates: "2017",
       description:
         "Coded my own Animal Card using HTML CSS during my Udacity coursework.",
-      images: ["images/animal.png"]
+      images: ["images/animal.png"],
     },
     {
       title: "Create MY On Line Resume ",
       dates: "2017",
       description:
         "Coded my own on line resume using HTML and CSS and java script during my Udadity coursework.",
-      images: ["images/resume.png"]
+      images: ["images/resume.png"],
     },
     
-  ]
+  ],
 };
 
 var education = {
