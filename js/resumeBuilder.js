@@ -28,10 +28,7 @@ var work = {
       dates: "Jan 2013 - Jul 2013",
       description:"Responsible for registering student schedules ",
       location: "Saudi Arabia - Al-khobar"
-     
     },
-
-
     {
       employer: "Eastern Gate Companey",
       title: "Mnangement Information Manager",
@@ -39,12 +36,9 @@ var work = {
       description:
         "Accomplishes information systems objectives by managing staff; designing and monitoring information systems.",
       location: "Saudi Arabia - Al-khobar"
-    
-
-    };
-
-   ],
-  
+    },
+   
+  ]
 };
 
 var projects = {
@@ -55,7 +49,7 @@ var projects = {
       description:
         "Coded my own Animal Card using HTML CSS during my Udacity coursework.",
       images: ["images/animal.png"]
-    };
+    },
     {
       title: "Create MY On Line Resume ",
       dates: "2017",
@@ -74,24 +68,20 @@ var education = {
       location: "Saudi Arabia, Dammam",
       degree: "BS",
       majors: ["MIS"],
-      dates: "2008 - 2012",
+      year: "2012"
     }
   ],
 
-  "onlineCourses": [
+  onlineCourses: [
     {
-      school: "Udacity",
+      name: "Udacity",
       location: "Saudia Arabia, Al-khobar",
-      title: "Nanodegree",
+      degree: "Nanodegree",
       majors: ["Front - End - Developer "],
-      dates: "20017 -  2017"
-      url:"http://www.udacity.com/"
+      year: "2017"
     }
   ]
 };
-
-
-bio.display = function() {
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -105,31 +95,15 @@ $("#header").append(formattedMessage);
 if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
 
-       //for(var skill in bio.skills){
-        //var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
-       // $("#skills").append(formattedSkill);   
-   
-   for(var skill=0; skill<bio.skills.length; skill++)
-{
+    for( skill in bio.skills){
         var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
-       $("#skills").append(formattedSkill);   
-
-
-
-
+        $("#skills").append(formattedSkill);   
     }
-  };
-
-
-
-
-
- 
-      //var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-      // formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);  
-       // formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);   
-      // formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-       // $("#skills").append(formattedSkill);    
+    //    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+    //    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);  
+    //    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);   
+    //    formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+    //    $("#skills").append(formattedSkill);    
 }
 
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -148,18 +122,6 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").append(formattedLocation);
 $("#footerContacts").append(formattedLocation);
 
-
-
-
-/* Internationalize Names  */
-function inName(name){
-    var names = name.trim().split(" ");   
-    names[1] = names[1].toUpperCase();
-    names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase(); 
-    return names.join(" ");  
-} 
-
-$("#main").append(internationalizeButton); 
 
 //Work functions
 work.display = function() {
@@ -261,8 +223,6 @@ education.display = function() {
 work.display();
 projects.display();
 education.display();
-bio.display();
-
 
 //Google Maps
 $("#mapDiv").append(googleMap);
