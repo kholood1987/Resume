@@ -145,16 +145,13 @@ var projects = {
 
             "title": "animal card",
             "dates": "july ,1 2017",
-            "description": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework.\
-                The page is fully responsive and works on mobile, tablet, and desktop browsers.",
+            "description": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework The page is fully responsive and works on mobile, tablet, and desktop browsers.",
             "images": ["images/animal.png"],
         },
         {
             "title": "Online resume",
             "dates": "aug ,22 2017",
-            "description": "Using jQuery, developed an interactive resume application that reads all data from a JSON\
-             file and then dynamically modifies the DOM to display the information. Further customized the project by \
-             personalizing the design using CSS.",
+            "description": "Using jQuery, developed an interactive resume application that reads all data from a JSON file and then dynamically modifies the DOM to display the information. Further customized the project by personalizing the design using CSS.",
             "images": ["images/resume.png"],
         },
     
